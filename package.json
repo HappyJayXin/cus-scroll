@@ -4,7 +4,7 @@
   "description": "Customized Scroll bar",
   "main": "cus-scroll.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx babel main.js --out-file cus-scroll.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,10 @@
     "custom"
   ],
   "author": "Jay",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1"
+  }
 }

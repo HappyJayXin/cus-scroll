@@ -1,5 +1,6 @@
 # cus-scroll
-Customized Scroll bar
+Customized Scroll bar.  
+To see some demos, check out [here](https://codepen.io/hapy63/pen/abbQdxe?editors=1000).
 
 ## Install
 
