@@ -23,7 +23,7 @@ npm install cus-scroll
 ```
 
 ### Javascript
-```javascritp
+```javascript
 import CusScroll from "cus-scroll";
 
 new CusScroll('#myCusScroll');
