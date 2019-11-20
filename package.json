@@ -1,6 +1,6 @@
 {
   "name": "cus-scroll",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Customized Scroll bar",
   "main": "cus-scroll.js",
   "scripts": {
