@@ -1,4 +1,4 @@
-.bar {
+.cus-scroll-bar {
   position: absolute;
   right: 0;
   top: 0px;
@@ -6,7 +6,7 @@
   height: calc(100% - 20px);
 }
 
-.bar span {
+.cus-scroll-bar span {
   cursor: pointer;
   width: 100%;
   height: 20px;
@@ -18,11 +18,11 @@
   z-index: 9;
 }
 
-.set-scroll {
+.set-cus-scroll {
   height: 100%;
   overflow-y: scroll;
 }
 
-.set-scroll::-webkit-scrollbar {
+.set-cus-scroll::-webkit-scrollbar {
   display: none;
 }

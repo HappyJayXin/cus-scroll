@@ -12,13 +12,15 @@ export default class {
     this.ctn = this.conatiner.children[0];
     this.setScroll();
 
-    this.bar = this.conatiner.querySelector('.bar span');
+    this.bar = this.conatiner.querySelector('.cus-scroll-bar span');
     this.barHeight = this.bar.offsetHeight;
     this.ctnHeight = this.ctn.offsetHeight;
     this.startY = 0
 
     this.mousemoveHandle = this.move.bind(this);
     this.mouseupHandle = this.stop.bind(this);
+
+    this.init()
   }
 
   /*
@@ -28,7 +30,7 @@ export default class {
     const bar = document.createElement("div");
     const span = document.createElement("span");
     bar.appendChild(span);
-    bar.classList.add('bar');
+    bar.classList.add('cus-scroll-bar');
     this.conatiner.appendChild(bar);
   }
 
@@ -36,7 +38,7 @@ export default class {
     * Add class name for can scroll.
   */
   setScroll() {
-    this.ctn.classList.add('set-scroll');
+    this.ctn.classList.add('set-cus-scroll');
   }
 
   /*
