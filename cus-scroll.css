@@ -1,0 +1,28 @@
+.bar {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 10px;
+  height: calc(100% - 20px);
+}
+
+.bar span {
+  cursor: pointer;
+  width: 100%;
+  height: 20px;
+  border-radius: 100% 0 0 100%/50%;
+  background: orange;
+  position: absolute;
+  right: 0;
+  top: 0%;
+  z-index: 9;
+}
+
+.set-scroll {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.set-scroll::-webkit-scrollbar {
+  display: none;
+}
