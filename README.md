@@ -11,7 +11,7 @@ npm install cus-scroll
 
 ## Unpkg
 ```html
-<script src="https://unpkg.com/cus-scroll@1.0.0/cus-scroll.min.js"></script>
+<script src="https://unpkg.com/cus-scroll@1.1.2/cus-scroll.min.js"></script>
 ```
 
 ## Set up
