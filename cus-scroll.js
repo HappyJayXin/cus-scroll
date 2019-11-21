@@ -14,7 +14,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /*
   Cusscroll
   Copyright (c) 2019 Jay (https://github.com/HappyJayXin)  
-  Version: 1.1.3
+  Version: 1.1.4
 */
 var _default =
   /*#__PURE__*/
@@ -64,8 +64,45 @@ var _default =
     }, {
       key: "init",
       value: function init() {
+        this.resizeEvent();
         this.scrollEvent();
         this.dragEvent();
+      }
+      /*
+        * Add resize event.
+      */
+
+    }, {
+      key: "resizeEvent",
+      value: function resizeEvent() {
+        this.toggleBar(); // Fist judge when load in.
+
+        window.addEventListener('resize', this.toggleBar.bind(this));
+      }
+      /*
+        * Judge overflow to let bar appear or disappear.
+      */
+
+    }, {
+      key: "toggleBar",
+      value: function toggleBar() {
+        if (this.isOverflown(this.ctn)) {
+          this.bar.style.display = 'block';
+        } else {
+          this.bar.style.display = 'none';
+        }
+      }
+      /*
+        * Overflow or no.
+        * @return {Boolean}
+      */
+
+    }, {
+      key: "isOverflown",
+      value: function isOverflown(_ref) {
+        var offsetHeight = _ref.offsetHeight,
+          scrollHeight = _ref.scrollHeight;
+        return scrollHeight > offsetHeight;
       }
       /*
         * Add scroll event.
