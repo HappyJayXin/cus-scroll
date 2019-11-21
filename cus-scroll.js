@@ -14,7 +14,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /*
   Cusscroll
   Copyright (c) 2019 Jay (https://github.com/HappyJayXin)  
-  Version: 1.1.4
+  Version: 1.1.5
 */
 var _default =
   /*#__PURE__*/

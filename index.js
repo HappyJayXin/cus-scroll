@@ -1,7 +1,7 @@
 /*
   Cusscroll
   Copyright (c) 2019 Jay (https://github.com/HappyJayXin)  
-  Version: 1.1.4
+  Version: 1.1.5
 */
 
 export default class {
