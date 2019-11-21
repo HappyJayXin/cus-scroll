@@ -3,11 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
-function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return !!right[Symbol.hasInstance](left); } else { return left instanceof right; } }
-
-function _classCallCheck(instance, Constructor) { if (!_instanceof(instance, Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
@@ -70,19 +68,24 @@ var _default =
         this.dragEvent();
       }
       /*
-        * Add scroll event and change scroll bar style.
+        * Add scroll event.
       */
 
     }, {
       key: "scrollEvent",
       value: function scrollEvent() {
-        var _this = this;
+        this.ctn.addEventListener("scroll", this.scrollStart.bind(this), false);
+      }
+      /*
+        * Set scroll bar scrolling position.
+      */
 
-        this.ctn.addEventListener("scroll", function () {
-          var top = parseInt(_this.ctn.scrollTop);
-          var scrollHeight = _this.ctn.scrollHeight - _this.ctnHeight;
-          _this.bar.style.top = "".concat(top / (scrollHeight / 100), "%");
-        }, false);
+    }, {
+      key: "scrollStart",
+      value: function scrollStart() {
+        var top = parseInt(this.ctn.scrollTop);
+        var scrollHeight = this.ctn.scrollHeight - this.ctnHeight;
+        this.bar.style.top = "".concat(top / (scrollHeight / 100), "%");
       }
       /*
         * Add event when mousedown scroll bar.
@@ -133,4 +136,4 @@ var _default =
     return _default;
   }();
 
-exports.default = _default;
+exports["default"] = _default;

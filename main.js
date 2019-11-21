@@ -50,18 +50,20 @@ export default class {
   }
 
   /*
-    * Add scroll event and change scroll bar style.
+    * Add scroll event.
   */
   scrollEvent() {
-    this.ctn.addEventListener(
-      "scroll", () => {
-        let top = parseInt(this.ctn.scrollTop);
-        let scrollHeight = this.ctn.scrollHeight - this.ctnHeight;
+    this.ctn.addEventListener("scroll", this.scrollStart.bind(this), false);
+  }
 
-        this.bar.style.top = `${top / (scrollHeight / 100)}%`;
-      },
-      false
-    );
+  /*
+    * Set scroll bar scrolling position.
+  */
+  scrollStart() {
+    let top = parseInt(this.ctn.scrollTop);
+    let scrollHeight = this.ctn.scrollHeight - this.ctnHeight;
+
+    this.bar.style.top = `${top / (scrollHeight / 100)}%`;
   }
 
   /*
